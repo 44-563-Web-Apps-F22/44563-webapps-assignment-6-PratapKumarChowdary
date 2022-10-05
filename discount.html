@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Discount</title>
+        <link rel="stylesheet" href="music.css">
+    </head>
+
+<body>
+
+<h2>computes discounts By Yudu Eswar Vinay Pratap Kumar Kuchi</h2>
+<center>
+    <div class="form-label">
+<form>
+    <label for="form1_age">Enter base amount </label>
+    <input type ="number" id="base" name="form1_age" min=10 max=50 step=2 value=20> <br>
+
+    <label for="form1_nick">Enter the discount percentage </label>
+    <input type ="number" id="percentage" name="form1_nick" value=10> <br>
+    <input type="button" class="button-2" type="button" onclick="discount()" value="Apply discount">
+</form>
+<p id="result">Discounted Values :</p>
+
+</div>
+</center>
+<script> 
+function discount()
+{
+    result=""
+    console.log("Values are getting from Form")
+    base = document.getElementById("base").value
+    discount = document.getElementById("percentage").value  
+    
+    for(let i=1;i<=5;i++)
+    {
+        result=result+" "+((i*base*discount)/100)
+
+    }
+    out = document.getElementById("result")
+    out.innerHTML = "Discounted amounts for base " + base + " are" + result
+}
+</script>
+
+</body>
+</html> 

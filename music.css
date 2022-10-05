@@ -53,9 +53,46 @@ h2{
     transition: 0.3s;
   }
 
+  .button-2 {
+    align-items: center;
+    background-color: var(--color-primary);
+    border-radius: 999em;
+    color: rgb(178, 51, 51);
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    padding-block: 0.75em;
+    padding-inline: 1em;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+
   
-.button:focus,
-.button:hover {
+.button:focus,.button-2:focus
+.button:hover,.button-2:hover {
   background-color: #e96363;
   color: #fbf6f7;
 }
+
+.form-label-2 {
+  background-color: #fffcfa;
+  background-image: linear-gradient(to bottom, #fbf6f7, #fff);
+  border-radius: 2em;
+  width: 50px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.0625);
+  inline-size: 375px;
+  overflow: auto;
+  padding: 2em;
+  display: grid;
+  gap: 1em;
+}
+
+#amount{
+  margin: 10px;
+
+}
+#percentage{
+  margin: 20px;
+}
+
+
