@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
     <title>Musician</title>
 
     <link rel="stylesheet" href="music.css">
     <link rel="stylesheet" href="./insects.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-    crossorigin="anonymous"></script>
- </head>
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</head>
+
 <body>
 
-<h2>Musician guess by Yudu Eswar Vinay Pratap Kumar Kuchi</h2>
+    <h2>Musician guess by Yudu Eswar Vinay Pratap Kumar Kuchi</h2>
 
-<hr>
-<center>
-<div class="form-label">
-    <form>
-    <label for="mus_name">Enter the secret musician name </label>
-    <input type ="password" id="mus_name_1" name="mus_name_1" min=10 max=50 step=2 value="John Lennon"> <br>
+    <hr>
+    <center>
+        <div class="form-label">
+            <form>
+                <label for="mus_name">Enter the secret musician name </label>
+                <input type="password" id="mus_name_1" name="mus_name_1" min=10 max=50 step=2 value="John Lennon"> <br>
 
-    <label for="guess_musc">Guess the musician </label>
-    <input type ="text" id="guess_musc_1" name="guess_musc_1" autofocus> <br>
+                <label for="guess_musc">Guess the musician </label>
+                <input type="text" id="guess_musc_1" name="guess_musc_1" autofocus> <br>
 
-    <input type="button" class="button" onclick="checkGuess()" value="Check the guess">
-</form>
-
-
-<p id="result">Results will be Displayed Here</p>
-</div>
-</center>
+                <input type="button" class="button" onclick="checkGuess()" value="Check the guess">
+            </form>
 
 
-<script> 
-var correct = 0
-var wrong = 0
-function checkGuess(){
-    console.log("Getting form values")
-    musician_name = document.getElementById("mus_name_1").value
-    guess_musician = document.getElementById("guess_musc_1").value
-  
-    out = document.getElementById("result")
-    if(musician_name === guess_musician){
-        correct = correct + 1
-        out.innerHTML = "Correct "+correct+" and Wrong "+wrong
-        alert("You got it right")
-    }
-    else{
-        wrong = wrong + 1
-        out.innerHTML = "Correct "+correct+" and Wrong "+wrong
-        alert("Wrong Musician")
-    }
-    
-     
-}
-</script>
+            <p id="result">Results will be Displayed Here</p>
+        </div>
+    </center>
 
-<div class="container">
-    <img src="./kangaroo.jpg" id = "pic" style="height: 100px; width: 100px" onclick="swapImage()">
-</div>
 
-<script>
-    useImage = 1
+    <script>
+        var correct = 0
+        var wrong = 0
+        function checkGuess() {
+            console.log("Getting form values")
+            musician_name = document.getElementById("mus_name_1").value
+            guess_musician = document.getElementById("guess_musc_1").value
 
-    function swapImage(){
-        switch(useImage){
-            case 1:
-                document.getElementById("pic").src = "./underwing.jpg";
-                useImage = 2;
-                break;
-            case 2:
-                document.getElementById("pic").src = "./cockroach.jpg";
-                useImage = 3;
-                break;
-            case 3:
-                document.getElementById("pic").src = "./kangaroo.jpg";
-                useImage = 1;
-                break;
-            default:
-                document.getElementById("pic").src = "./kangaroo.jpg";
+            out = document.getElementById("result")
+            if (musician_name === guess_musician) {
+                correct = correct + 1
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("You got it right")
+            }
+            else {
+                wrong = wrong + 1
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("Wrong Musician")
+            }
+
+
         }
-    }
-</script>
+    </script>
+
+    <div class="container">
+        <img src="./kangaroo.jpg" id="pic" style="height: 100px; width: 100px" onclick="swapImage()">
+    </div>
+
+    <script>
+        useImage = 1
+
+        function swapImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("pic").src = "./underwing.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById("pic").src = "./cockroach.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById("pic").src = "./kangaroo.jpg";
+                    useImage = 1;
+                    break;
+                default:
+                    document.getElementById("pic").src = "./kangaroo.jpg";
+            }
+        }
+    </script>
 
 </body>
-</html> 
+
+</html>

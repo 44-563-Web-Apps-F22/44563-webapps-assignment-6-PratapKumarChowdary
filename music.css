@@ -95,4 +95,14 @@ h2{
   margin: 20px;
 }
 
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+fieldset {
+  display: inline-grid;
+  line-height: 1.5;
+}
+
+
 
