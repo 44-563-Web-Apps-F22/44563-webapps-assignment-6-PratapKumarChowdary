@@ -58,13 +58,20 @@
                 alert("Wrong Musician")
             }
 
+            if(wrong === 3 ){
+                out.innerHTML = "Correct " + correct + " and Wrong " + wrong
+                alert("Sorry, game over.")
+            }
+
 
         }
     </script>
 
+<center>
     <div class="container">
         <img src="./kangaroo.jpg" id="pic" style="height: 100px; width: 100px" onclick="swapImage()">
     </div>
+</center>
 
     <script>
         useImage = 1
